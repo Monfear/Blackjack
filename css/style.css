@@ -1,0 +1,237 @@
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  color: #1b262c;
+  background-color: #2f3640;
+}
+
+.game {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+.modal-result {
+  background-color: rgba(201, 255, 191, 0.9);
+  -webkit-box-shadow: 0 0 10px 7px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px 7px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding: 2.4%;
+  font-size: 2.76rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.modal-result__btn-next {
+  display: block;
+  margin: 10px auto 0;
+  padding: 6px;
+  width: 144px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.1rem;
+}
+
+.modal-result__btn-next:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background-color: #ffffa0;
+}
+
+.account-ballance {
+  position: absolute;
+  top: 2%;
+  left: 1%;
+  color: white;
+  font-size: 1.32rem;
+}
+
+.account-ballance__amount {
+  font-size: 1.68rem;
+  font-weight: bold;
+  text-shadow: 0px 2px 0px rgba(255, 255, 255, 0.5);
+}
+
+.account-bet {
+  position: absolute;
+  top: 8%;
+  left: 1%;
+  color: white;
+  font-size: 1.32rem;
+}
+
+.account-bet__amount {
+  font-size: 1.68rem;
+  font-weight: bold;
+  text-shadow: 0px 2px 0px rgba(255, 255, 255, 0.5);
+}
+
+.dealer-points {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 1.8rem;
+  color: white;
+}
+
+.dealer-points__result {
+  font-weight: bold;
+  text-shadow: 0px 2px 0px rgba(255, 255, 255, 0.5);
+}
+
+.player-points {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 1.8rem;
+  color: white;
+}
+
+.player-points__result {
+  font-weight: bold;
+  text-shadow: 0px 2px 0px rgba(255, 255, 255, 0.5);
+}
+
+.table {
+  position: relative;
+  width: 960px;
+  height: 540px;
+  background-color: #76b041;
+  border: 25px solid #2b0000;
+  border-radius: 25%;
+  -webkit-box-shadow: 0 0 10px 7px inset;
+          box-shadow: 0 0 10px 7px inset;
+}
+
+.table h3 {
+  width: 48%;
+  font-size: 1.44rem;
+  margin: 10px auto 0;
+  text-align: center;
+  border-bottom: 2px solid #1b262c;
+}
+
+.table__cards-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 15px;
+}
+
+.table__card {
+  width: 126px;
+  margin-right: 20px;
+}
+
+.bet-area {
+  position: absolute;
+  left: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.bet-area__btn-bet {
+  font-size: 1.68rem;
+  font-weight: bold;
+  padding: 20.4px;
+  margin: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.bet-area__btn-bet:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background-color: #ffffa0;
+}
+
+.action-area {
+  position: absolute;
+  right: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.action-area__btn-action {
+  font-size: 1.68rem;
+  font-weight: bold;
+  padding: 20.4px;
+  margin: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.action-area__btn-action:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background-color: #ffffa0;
+}
+
+.btn-deal {
+  position: absolute;
+  bottom: 10%;
+  left: 3.5%;
+  font-size: 1.92rem;
+  font-weight: bold;
+  padding: 18px 36px;
+  border-radius: 15%;
+  cursor: pointer;
+}
+
+.btn-deal:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background-color: #ffffa0;
+}
+
+button:disabled:hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  background-color: initial;
+  cursor: not-allowed;
+}
+
+button.error:active {
+  background-color: red;
+}
+
+.hide {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack</title>
+    <meta name="description"
+        content="Play the best free Blackjack game. Easy to read cards. You versus the dealer! Play immediately.">
+
+    <link rel="shortcut icon" href="./img/favicon.jpg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <div class="game">
+        <p class="account-ballance">Account ballance:
+            <span class="account-ballance__amount" data-account-ballance>0</span> $</p>
+
+        <p class="account-bet">Bet amount: <span class="account-bet__amount" data-bet-amount>0</span> $
+            <small data-ingame hidden>(in game)</small>
+        </p>
+
+        <p class="dealer-points">Dealer: <span class="dealer-points__result" data-dealer-points>0</span> points</p>
+        <p class="player-points">Player: <span class="player-points__result" data-player-points>0</span> points</p>
+
+        <div class="table">
+            <h3>Dealer's cards</h3>
+            <div class="table__cards-area" data-dealer-cards>
+                <img class="table__card" src="./img/cards/back.png" alt="dealerCard1">
+                <img class="table__card" src="./img/cards/back.png" alt="dealerCard2">
+            </div>
+
+            <h3>Players's cards</h3>
+            <div class="table__cards-area" data-player-cards>
+                <img class="table__card" src="./img/cards/back.png" alt="playerCard1">
+                <img class="table__card" src="./img/cards/back.png" alt="playerCard2">
+            </div>
+
+            <div class="modal-result hide" data-modal-result>
+                <span data-player-name>Dealer</span> <span>wins</span> <span data-bj-info hidden>(Blackjack)</span>
+                <button class="modal-result__btn-next" data-btn-next-round>Next round</button>
+            </div>
+        </div>
+
+        <div class="bet-area">
+            <button class="bet-area__btn-bet" data-btn-bet10>10</button>
+            <button class="bet-area__btn-bet" data-btn-bet100>100</button>
+            <button class="bet-area__btn-bet" data-btn-bet500>500</button>
+            <button class="bet-area__btn-bet" data-btn-clear>0</button>
+        </div>
+
+        <button class="btn-deal error" data-btn-deal>Deal</button>
+
+        <div class="action-area">
+            <button class="action-area__btn-action" data-btn-hit>Hit</button>
+            <button class="action-area__btn-action" data-btn-stand>Stand</button>
+            <button class="action-area__btn-action" data-btn-double>Double</button>
+        </div>
+
+    </div>
+
+    <script type="module" src="./script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,208 @@
+$scale: 1.2;
+
+@mixin hoverButton {
+    transform: scale(1.1);
+    background-color: rgb(255, 255, 160);
+}
+
+@mixin textInfo {
+    font-weight: bold;
+    text-shadow: 0px 2px 0px rgba(255, 255, 255, 0.5);
+}
+
+@mixin staticButton {
+    font-size: 1.4rem * $scale;
+    font-weight: bold;
+    padding: 17px * $scale;
+    margin: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    color: #1b262c;
+    background-color: #2f3640;
+}
+
+.game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.modal-result {
+    background-color: rgba(201, 255, 191, 0.9);
+    box-shadow: 0 0 10px 7px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 2% * $scale;
+    font-size: 2.3rem * $scale;
+    font-weight: bold;
+    text-align: center;
+
+    &__btn-next {
+        display: block;
+        margin: 10px auto 0;
+        padding: 5px * $scale;
+        width: 120px * $scale;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 1.1rem;
+
+        &:hover {
+            @include hoverButton();
+        }
+    }
+}
+
+.account-ballance {
+    position: absolute;
+    top: 2%;
+    left: 1%;
+    color: white;
+    font-size: 1.1rem * $scale;
+
+    &__amount {
+        font-size: 1.4rem * $scale;
+        @include textInfo();
+    }
+}
+
+.account-bet {
+    position: absolute;
+    top: 8%;
+    left: 1%;
+    color: white;
+    font-size: 1.1rem * $scale;
+
+    &__amount {
+        font-size: 1.4rem * $scale;
+        @include textInfo();
+    }
+}
+
+.dealer-points {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem * $scale;
+    color: white;
+
+    &__result {
+        @include textInfo();
+    }
+}
+
+.player-points {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem * $scale;
+    color: white;
+
+    &__result {
+        @include textInfo();
+    }
+}
+
+.table {
+    position: relative;
+    width: 800px * $scale;
+    height: 450px * $scale;
+    background-color: #76b041;
+    border: 25px solid #2b0000;
+    border-radius: 25%;
+    box-shadow: 0 0 10px 7px inset;
+
+    h3 {
+        width: 40% * $scale;
+        font-size: 1.2rem * $scale;
+        margin: 10px auto 0;
+        text-align: center;
+        border-bottom: 2px solid #1b262c;
+    }
+
+    &__cards-area {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    &__card {
+        width: 105px * $scale;
+        margin-right: 20px;
+    }
+}
+
+.bet-area {
+    position: absolute;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+
+    &__btn-bet {
+        @include staticButton();
+
+        &:hover {
+            @include hoverButton();
+        }
+    }
+}
+
+.action-area {
+    position: absolute;
+    right: 5%;
+    display: flex;
+    flex-direction: column;
+
+    &__btn-action {
+        @include staticButton();
+
+        &:hover {
+            @include hoverButton();
+        }
+    }
+}
+
+.btn-deal {
+    position: absolute;
+    bottom: 10%;
+    left: 3.5%;
+    font-size: 1.6rem * $scale;
+    font-weight: bold;
+    padding: (15px * $scale) (30px * $scale);
+    border-radius: 15%;
+    cursor: pointer;
+
+    &:hover {
+        @include hoverButton();
+    }
+}
+
+button:disabled:hover {
+    transform: scale(1);
+    background-color: initial;
+    cursor: not-allowed;
+}
+
+button.error:active {
+    background-color: red;
+}
+
+.hide {
+    display: none;
+}
